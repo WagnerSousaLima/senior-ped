@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informática Sênior Visual - Computador, Teclado e Word</title>
+  <style>
+    :root {
+      --ink: #10223a;
+      --muted: #506070;
+      --paper: #f7f9fc;
+      --card: #ffffff;
+      --blue: #163f7a;
+      --sky: #ddecff;
+      --orange: #f47a2b;
+      --green: #23916f;
+      --red: #c54444;
+      --line: #cfdaea;
+      --shadow: 0 24px 70px rgba(16, 34, 58, .16);
+      --radius: 8px;
+      --safe-height: calc(100dvh - 100px);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #dfe7f1;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    .deck {
+      height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 12px 16px 70px;
+    }
+
+    .slide {
+      width: min(1120px, calc(100vw - 32px), calc(var(--safe-height) * 16 / 9));
+      max-height: var(--safe-height);
+      aspect-ratio: 16 / 9;
+      background: var(--paper);
+      border: 1px solid rgba(16, 34, 58, .12);
+      box-shadow: var(--shadow);
+      display: none;
+      overflow: hidden;
+      container-type: inline-size;
+    }
+
+    .slide.active {
+      display: grid;
+      grid-template-rows: min-content minmax(0, 1fr);
+    }
+
+    header {
+      padding: clamp(16px, 2.1cqw, 24px) clamp(24px, 3.4cqw, 40px) 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      background: var(--blue);
+      border-left: 8px solid var(--orange);
+      border-radius: 7px;
+      padding: 9px 15px;
+      font-size: clamp(16px, 1.8cqw, 22px);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .lesson {
+      color: #43546a;
+      font-size: clamp(14px, 1.45cqw, 18px);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .content {
+      min-height: 0;
+      padding: 8px clamp(24px, 3.4cqw, 40px) clamp(22px, 3cqw, 34px);
+      display: grid;
+      gap: clamp(12px, 1.6cqw, 18px);
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      color: var(--blue);
+      font-size: clamp(36px, 5.2cqw, 62px);
+      line-height: 1.02;
+    }
+
+    h2 {
+      color: var(--blue);
+      font-size: clamp(28px, 3.8cqw, 46px);
+      line-height: 1.08;
+    }
+
+    h3 {
+      color: var(--blue);
+      font-size: clamp(20px, 2.2cqw, 28px);
+      line-height: 1.15;
+    }
+
+    p, li {
+      font-size: clamp(18px, 1.85cqw, 24px);
+      line-height: 1.32;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 26px;
+    }
+
+    .hero-slide {
+      background: linear-gradient(90deg, var(--paper) 0 62%, var(--sky) 62% 100%);
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    .hero-content p {
+      margin-top: 16px;
+      font-size: clamp(22px, 2.4cqw, 30px);
+    }
+
+    .visual-computer {
+      display: grid;
+      justify-items: center;
+      gap: 0;
+    }
+
+    .monitor-art {
+      width: min(390px, 42cqw);
+      aspect-ratio: 16 / 10;
+      background: #162e4e;
+      border: 12px solid #233b57;
+      border-radius: 14px;
+      position: relative;
+    }
+
+    .monitor-art::before {
+      content: "";
+      position: absolute;
+      inset: 24px;
+      border-radius: 6px;
+      background:
+        linear-gradient(#edf5ff 0 22%, transparent 22%),
+        linear-gradient(135deg, #5b87c2, #f47a2b);
+    }
+
+    .stand {
+      width: 120px;
+      height: 34px;
+      background: #233b57;
+    }
+
+    .base {
+      width: 260px;
+      height: 28px;
+      background: #233b57;
+      border-radius: 50px 50px 8px 8px;
+    }
+
+    .big-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .two-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(16px, 2cqw, 24px);
+      min-height: 0;
+    }
+
+    .picture-card {
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      text-align: center;
+      gap: 12px;
+      min-height: 210px;
+      cursor: default;
+    }
+
+    .picture-card h3 {
+      color: var(--ink);
+      font-size: clamp(22px, 2.4cqw, 32px);
+    }
+
+    .icon {
+      width: min(150px, 16cqw);
+      height: min(130px, 14cqw);
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .icon.monitor::before {
+      content: "";
+      width: 125px;
+      height: 78px;
+      border: 10px solid #233b57;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #75a4e2, #f47a2b);
+      display: block;
+    }
+
+    .icon.monitor::after {
+      content: "";
+      position: absolute;
+      bottom: 12px;
+      width: 92px;
+      height: 18px;
+      background: #233b57;
+      border-radius: 20px 20px 5px 5px;
+    }
+
+    .icon.keyboard {
+      width: min(190px, 20cqw);
+      height: min(118px, 12cqw);
+      border-radius: 10px;
+      border: 2px solid #9eb2cc;
+      background:
+        linear-gradient(90deg, transparent 0 9%, #fff 9% 10%, transparent 10% 19%, #fff 19% 20%, transparent 20% 29%, #fff 29% 30%, transparent 30% 39%, #fff 39% 40%, transparent 40% 49%, #fff 49% 50%, transparent 50% 59%, #fff 59% 60%, transparent 60% 69%, #fff 69% 70%, transparent 70% 79%, #fff 79% 80%, transparent 80%),
+        repeating-linear-gradient(#edf3fb 0 26px, #ffffff 26px 30px);
+      background-color: #d8e4f2;
+    }
+
+    .icon.mouse::before {
+      content: "";
+      width: 70px;
+      height: 112px;
+      border-radius: 42px;
+      background: #ffffff;
+      border: 8px solid #233b57;
+      display: block;
+    }
+
+    .icon.mouse::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      width: 8px;
+      height: 28px;
+      background: var(--orange);
+      border-radius: 99px;
+    }
+
+    .icon.tower::before {
+      content: "";
+      width: 90px;
+      height: 124px;
+      background: #263e5b;
+      border-radius: 10px;
+      display: block;
+      box-shadow: inset 0 0 0 8px rgba(255,255,255,.08);
+    }
+
+    .icon.tower::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      width: 18px;
+      height: 18px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 34px 0 #dfe7f1;
+    }
+
+    .icon.printer::before {
+      content: "";
+      width: 125px;
+      height: 70px;
+      border-radius: 10px;
+      background: #263e5b;
+      display: block;
+    }
+
+    .icon.printer::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      width: 86px;
+      height: 88px;
+      background: #fff;
+      border: 2px solid #9eb2cc;
+      border-radius: 4px;
+      box-shadow: 0 -34px 0 #e7eff9;
+    }
+
+    .icon.speaker::before {
+      content: "";
+      width: 84px;
+      height: 112px;
+      border-radius: 12px;
+      background: #263e5b;
+      display: block;
+    }
+
+    .icon.speaker::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 8px solid #dfe7f1;
+      background: var(--orange);
+      box-shadow: 0 52px 0 -8px #dfe7f1;
+    }
+
+    .sound-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .sound-btn,
+    .nav-btn,
+    .choice,
+    .target {
+      font: inherit;
+    }
+
+    .sound-btn {
+      border: 0;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .mini {
+      color: var(--muted);
+      font-size: clamp(16px, 1.45cqw, 19px);
+    }
+
+    .focus-word {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      margin: 6px;
+      font-size: clamp(24px, 2.8cqw, 36px);
+      font-weight: 900;
+      color: var(--blue);
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .choice {
+      border: 3px solid var(--line);
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px;
+      min-height: 170px;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .choice.selected {
+      border-color: var(--orange);
+      background: #fff3ea;
+    }
+
+    .choice.correct {
+      border-color: var(--green);
+      background: #e7f8f0;
+    }
+
+    .choice.wrong {
+      border-color: var(--red);
+      background: #fff0f0;
+    }
+
+    .feedback {
+      min-height: 34px;
+      font-weight: 900;
+      color: var(--blue);
+      font-size: clamp(18px, 1.7cqw, 22px);
+    }
+
+    .task-area {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .mouse-zone {
+      position: relative;
+      min-height: 360px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, rgba(22,63,122,.06) 1px, transparent 1px),
+        linear-gradient(rgba(22,63,122,.06) 1px, transparent 1px),
+        #fff;
+      background-size: 42px 42px;
+      overflow: hidden;
+    }
+
+    .target {
+      position: absolute;
+      border: 0;
+      border-radius: 50%;
+      width: 96px;
+      height: 96px;
+      display: grid;
+      place-items: center;
+      background: var(--orange);
+      color: #fff;
+      font-size: 42px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(244, 122, 43, .25);
+    }
+
+    .target.hit {
+      background: var(--green);
+      transform: scale(.92);
+    }
+
+    .keyboard-large {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 8px;
+      background: #dbe6f4;
+      border: 1px solid #adbfd7;
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .key {
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #9fb2cb;
+      border-bottom-width: 4px;
+      border-radius: 7px;
+      background: #fff;
+      color: var(--blue);
+      font-size: clamp(20px, 2.2cqw, 30px);
+      font-weight: 900;
+    }
+
+    .key.orange { background: #fff0e6; border-color: #f3a46f; color: #ad4f17; }
+    .key.green { background: #e5f8ef; border-color: #78c7a7; color: #1d684f; }
+    .key.space { grid-column: span 4; }
+    .key.wide { grid-column: span 2; }
+
+    .typing-box {
+      width: 100%;
+      min-height: 122px;
+      resize: none;
+      border: 3px solid var(--line);
+      border-radius: 10px;
+      padding: 14px;
+      font: 900 34px/1.3 "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+    }
+
+    .word-window {
+      background: #fff;
+      border: 1px solid #aebfd6;
+      border-radius: 10px;
+      overflow: hidden;
+      min-height: 330px;
+    }
+
+    .titlebar {
+      height: 48px;
+      background: #245aa2;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .ribbon {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 12px;
+      background: #eef3f9;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .ribbon div {
+      min-height: 58px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .page {
+      width: 72%;
+      min-height: 150px;
+      margin: 24px auto;
+      background: #fff;
+      border: 1px solid #cbd7e8;
+      box-shadow: 0 12px 30px rgba(16,34,58,.12);
+      padding: 22px;
+    }
+
+    .line {
+      height: 15px;
+      background: #d8e3f1;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .line.title {
+      width: 58%;
+      height: 26px;
+      background: var(--blue);
+    }
+
+    .line.short { width: 44%; }
+    .line.medium { width: 76%; }
+
+    .checklist {
+      display: grid;
+      gap: 12px;
+    }
+
+    .checkline {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: clamp(18px, 1.8cqw, 24px);
+      font-weight: 900;
+    }
+
+    .checkline span {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .controls {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-height: 60px;
+      background: rgba(255,255,255,.96);
+      border-top: 1px solid rgba(16,34,58,.14);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 9px 18px;
+      z-index: 5;
+    }
+
+    .nav-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      width: 46px;
+      height: 42px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--blue);
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .progress {
+      height: 10px;
+      background: #d8e2ef;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #2f69b1, var(--orange));
+    }
+
+    .counter {
+      min-width: 78px;
+      color: var(--blue);
+      font-weight: 900;
+      text-align: right;
+    }
+
+    .center {
+      align-content: center;
+      justify-items: center;
+      text-align: center;
+    }
+
+    @media (max-height: 760px) and (min-width: 901px) {
+      :root { --safe-height: calc(100dvh - 86px); }
+      .slide {
+        width: min(980px, calc(100vw - 28px), calc(var(--safe-height) * 16 / 9));
+      }
+      .picture-card { min-height: 170px; }
+      .mouse-zone { min-height: 290px; }
+      .key { min-height: 44px; }
+      .target { width: 78px; height: 78px; }
+      .word-window { min-height: 285px; }
+    }
+
+    @media (max-width: 900px) {
+      body { overflow: auto; }
+      .deck { height: auto; min-height: 100dvh; padding: 12px 12px 78px; }
+      .slide {
+        width: calc(100vw - 24px);
+        min-height: calc(100dvh - 100px);
+        max-height: none;
+        aspect-ratio: auto;
+        overflow: visible;
+      }
+      header { padding: 18px 18px 6px; }
+      .content { padding: 10px 18px 28px; }
+      .hero-content, .big-grid, .two-grid, .task-area, .choice-grid { grid-template-columns: 1fr; }
+      .icon { width: 140px; height: 122px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active hero-slide" data-say="Hoje vamos conhecer o computador, tocar no mouse, achar teclas e começar no Word.">
+      <header>
+        <div class="tag">Aula visual</div>
+        <div class="lesson">Informática Sênior</div>
+      </header>
+      <div class="content hero-content">
+        <div>
+          <h1>Computador sem medo</h1>
+          <p>Ver, ouvir, apontar, clicar e praticar.</p>
+          <div class="sound-row">
+            <button class="sound-btn" data-speak="Hoje vamos aprender olhando, ouvindo e praticando.">Ouvir</button>
+          </div>
+        </div>
+        <div class="visual-computer" aria-hidden="true">
+          <div class="monitor-art"></div>
+          <div class="stand"></div>
+          <div class="base"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Primeiro vamos reconhecer as partes. Depois vamos clicar. Depois vamos apertar algumas teclas. No fim, vamos abrir o Word.">
+      <header>
+        <div class="tag">O caminho</div>
+        <div class="lesson">Poucos passos</div>
+      </header>
+      <div class="content big-grid">
+        <div class="card picture-card">
+          <div class="icon monitor"></div>
+          <h3>Ver</h3>
+          <p class="mini">olhar as partes</p>
+        </div>
+        <div class="card picture-card">
+          <div class="icon mouse"></div>
+          <h3>Clicar</h3>
+          <p class="mini">usar o mouse</p>
+        </div>
+        <div class="card picture-card">
+          <div class="icon keyboard"></div>
+          <h3>Tocar</h3>
+          <p class="mini">achar teclas</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Estas são partes do computador. Monitor. Teclado. Mouse. Gabinete.">
+      <header>
+        <div class="tag">Partes</div>
+        <div class="lesson">Olhe e aponte</div>
+      </header>
+      <div class="content big-grid">
+        <button class="choice" data-speak="Monitor. O monitor mostra imagens.">
+          <div class="icon monitor"></div>
+          <h3>Monitor</h3>
+        </button>
+        <button class="choice" data-speak="Teclado. O teclado tem letras e números.">
+          <div class="icon keyboard"></div>
+          <h3>Teclado</h3>
+        </button>
+        <button class="choice" data-speak="Mouse. O mouse move a seta e clica.">
+          <div class="icon mouse"></div>
+          <h3>Mouse</h3>
+        </button>
+        <button class="choice" data-speak="Gabinete. O gabinete guarda partes importantes do computador.">
+          <div class="icon tower"></div>
+          <h3>Gabinete</h3>
+        </button>
+        <button class="choice" data-speak="Impressora. A impressora coloca no papel.">
+          <div class="icon printer"></div>
+          <h3>Impressora</h3>
+        </button>
+        <button class="choice" data-speak="Caixa de som. A caixa de som toca áudio.">
+          <div class="icon speaker"></div>
+          <h3>Som</h3>
+        </button>
+      </div>
+    </section>
+
+    <section class="slide" data-say="O que eu toco para escrever? Escolha o teclado.">
+      <header>
+        <div class="tag">Escolha</div>
+        <div class="lesson">Para escrever</div>
+      </header>
+      <div class="content">
+        <h2>O que eu uso para escrever?</h2>
+        <div class="choice-grid" data-question="keyboard">
+          <button class="choice" data-answer="wrong"><div class="icon monitor"></div><h3>Monitor</h3></button>
+          <button class="choice" data-answer="right"><div class="icon keyboard"></div><h3>Teclado</h3></button>
+          <button class="choice" data-answer="wrong"><div class="icon printer"></div><h3>Impressora</h3></button>
+        </div>
+        <p class="feedback" id="keyboardFeedback"></p>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Algumas coisas entram no computador. Outras saem do computador. O teclado entra. O monitor sai.">
+      <header>
+        <div class="tag">Entrada e saída</div>
+        <div class="lesson">Com imagens</div>
+      </header>
+      <div class="content two-grid">
+        <div class="card picture-card" style="border-top: 10px solid var(--green);">
+          <div class="icon keyboard"></div>
+          <h2>Entrada</h2>
+          <p>A mão manda informação.</p>
+        </div>
+        <div class="card picture-card" style="border-top: 10px solid var(--orange);">
+          <div class="icon monitor"></div>
+          <h2>Saída</h2>
+          <p>O computador mostra resposta.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Vamos treinar o mouse. Clique no círculo laranja.">
+      <header>
+        <div class="tag">Mouse</div>
+        <div class="lesson">Clique no círculo</div>
+      </header>
+      <div class="content task-area">
+        <div class="card">
+          <h2>Clique no alvo</h2>
+          <p>Use calma. Leve a seta até o círculo.</p>
+          <p class="feedback" id="targetScore">0 cliques</p>
+          <div class="sound-row">
+            <button class="sound-btn" data-speak="Leve a seta até o círculo laranja e clique uma vez.">Ouvir</button>
+          </div>
+        </div>
+        <div class="mouse-zone" id="mouseZone">
+          <button class="target" id="targetBtn" style="left: 48%; top: 34%;" aria-label="alvo"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Estas teclas ajudam muito. Espaço separa palavras. Enter muda de linha. Apagar corrige.">
+      <header>
+        <div class="tag">Teclas amigas</div>
+        <div class="lesson">Poucas teclas</div>
+      </header>
+      <div class="content">
+        <div class="keyboard-large">
+          <div class="key">A</div><div class="key">B</div><div class="key">C</div><div class="key">D</div><div class="key">E</div>
+          <div class="key">F</div><div class="key">G</div><div class="key">H</div><div class="key">I</div><div class="key">J</div>
+          <div class="key orange wide">Apagar</div><div class="key green wide">Enter</div><div class="key space">Espaço</div>
+          <div class="key">1</div><div class="key">2</div>
+        </div>
+        <div class="two-grid">
+          <div class="card"><h3>Espaço</h3><p>Separa as palavras.</p></div>
+          <div class="card"><h3>Apagar</h3><p>Corrige um erro.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Vamos procurar as letras do nome. A letra grande ajuda o olho a encontrar a tecla.">
+      <header>
+        <div class="tag">Meu nome</div>
+        <div class="lesson">Letras grandes</div>
+      </header>
+      <div class="content two-grid">
+        <div class="card">
+          <h2>Procure no teclado</h2>
+          <p class="mini">O professor escreve seu nome em um cartão.</p>
+          <div>
+            <span class="focus-word">A</span>
+            <span class="focus-word">E</span>
+            <span class="focus-word">I</span>
+            <span class="focus-word">O</span>
+            <span class="focus-word">U</span>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Digite aqui</h2>
+          <textarea class="typing-box" id="typingBox" placeholder="A E I O U"></textarea>
+          <p class="feedback" id="typingCount">0 toques</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="O Word é uma folha no computador. Usamos para escrever, colocar nome e salvar.">
+      <header>
+        <div class="tag">Word</div>
+        <div class="lesson">Folha digital</div>
+      </header>
+      <div class="content two-grid">
+        <div class="word-window">
+          <div class="titlebar"><span>Word</span><span>_ □ X</span></div>
+          <div class="ribbon">
+            <div>Abrir</div><div>Letra</div><div>Cor</div><div>Salvar</div>
+          </div>
+          <div class="page">
+            <div class="line title"></div>
+            <div class="line medium"></div>
+            <div class="line"></div>
+            <div class="line short"></div>
+          </div>
+        </div>
+        <div class="card picture-card">
+          <h2>Uma folha na tela</h2>
+          <p>Escreva seu nome com ajuda do cartão.</p>
+          <button class="sound-btn" data-speak="O Word é uma folha no computador. Vamos escrever o nome e salvar.">Ouvir</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="No Word, fazemos poucos passos. Abrir. Clicar na folha. Digitar. Salvar.">
+      <header>
+        <div class="tag">Passos</div>
+        <div class="lesson">Word</div>
+      </header>
+      <div class="content big-grid">
+        <div class="card picture-card"><h1>1</h1><h3>Abrir</h3><p class="mini">Word</p></div>
+        <div class="card picture-card"><h1>2</h1><h3>Clicar</h3><p class="mini">na folha</p></div>
+        <div class="card picture-card"><h1>3</h1><h3>Digitar</h3><p class="mini">o nome</p></div>
+        <div class="card picture-card"><h1>4</h1><h3>Salvar</h3><p class="mini">guardar</p></div>
+        <div class="card picture-card"><h1>5</h1><h3>Abrir</h3><p class="mini">de novo</p></div>
+        <div class="card picture-card"><h1>✓</h1><h3>Consegui</h3><p class="mini">fim</p></div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Agora vamos fazer juntos. Tocar. Clicar. Digitar. Salvar.">
+      <header>
+        <div class="tag">Prática</div>
+        <div class="lesson">Juntos</div>
+      </header>
+      <div class="content two-grid">
+        <div class="card">
+          <h2>Eu consigo</h2>
+          <div class="checklist">
+            <div class="checkline"><span>👀</span>Olhei as partes</div>
+            <div class="checkline"><span>🖱</span>Cliquei no alvo</div>
+            <div class="checkline"><span>⌨</span>Toquei nas teclas</div>
+            <div class="checkline"><span>📄</span>Escrevi no Word</div>
+          </div>
+        </div>
+        <div class="card picture-card">
+          <h2>Uma vitória por vez</h2>
+          <p>O importante é praticar com calma.</p>
+          <button class="sound-btn" data-speak="Uma vitória por vez. O importante é praticar com calma.">Ouvir</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Hoje você reconheceu partes do computador, clicou, tocou teclas e começou no Word.">
+      <header>
+        <div class="tag">Fechamento</div>
+        <div class="lesson">Repetir e lembrar</div>
+      </header>
+      <div class="content center">
+        <h1>Você praticou.</h1>
+        <div class="big-grid" style="width:100%;">
+          <div class="card picture-card"><div class="icon monitor"></div><h3>Computador</h3></div>
+          <div class="card picture-card"><div class="icon mouse"></div><h3>Mouse</h3></div>
+          <div class="card picture-card"><div class="icon keyboard"></div><h3>Teclado</h3></div>
+        </div>
+        <button class="sound-btn" data-speak="Parabéns. Hoje você praticou computador, mouse e teclado.">Ouvir</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="Controles dos slides">
+    <div class="nav-group">
+      <button class="nav-btn" id="prevBtn" title="Slide anterior">‹</button>
+      <button class="nav-btn" id="nextBtn" title="Próximo slide">›</button>
+      <button class="nav-btn" id="speakBtn" title="Ouvir este slide">▶</button>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    <div class="counter" id="counter"></div>
+  </nav>
+
+  <script>
+    const slides = [...document.querySelectorAll(".slide")];
+    const progressBar = document.getElementById("progressBar");
+    const counter = document.getElementById("counter");
+    let current = 0;
+    let targetHits = 0;
+
+    function speak(text) {
+      if (!("speechSynthesis" in window)) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "pt-BR";
+      utterance.rate = 0.82;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function showSlide(index) {
+      current = Math.max(0, Math.min(index, slides.length - 1));
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+      progressBar.style.width = `${((current + 1) / slides.length) * 100}%`;
+      counter.textContent = `${current + 1} / ${slides.length}`;
+    }
+
+    function nextSlide() { showSlide(current + 1); }
+    function prevSlide() { showSlide(current - 1); }
+
+    document.getElementById("nextBtn").addEventListener("click", nextSlide);
+    document.getElementById("prevBtn").addEventListener("click", prevSlide);
+    document.getElementById("speakBtn").addEventListener("click", () => speak(slides[current].dataset.say || ""));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") nextSlide();
+      if (event.key === "ArrowLeft" || event.key === "PageUp") prevSlide();
+      if (event.key.toLowerCase() === "o") speak(slides[current].dataset.say || "");
+      if (event.key === "Home") showSlide(0);
+      if (event.key === "End") showSlide(slides.length - 1);
+    });
+
+    document.querySelectorAll("[data-speak]").forEach((button) => {
+      button.addEventListener("click", () => speak(button.dataset.speak));
+    });
+
+    document.querySelectorAll("[data-question='keyboard'] .choice").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-question='keyboard'] .choice").forEach(item => item.classList.remove("correct", "wrong"));
+        const ok = button.dataset.answer === "right";
+        button.classList.add(ok ? "correct" : "wrong");
+        document.getElementById("keyboardFeedback").textContent = ok ? "Isso. Teclado." : "Tente outra imagem.";
+        speak(ok ? "Isso. Teclado." : "Tente outra imagem.");
+      });
+    });
+
+    const targetBtn = document.getElementById("targetBtn");
+    const mouseZone = document.getElementById("mouseZone");
+    targetBtn.addEventListener("click", () => {
+      targetHits += 1;
+      document.getElementById("targetScore").textContent = `${targetHits} cliques`;
+      targetBtn.classList.add("hit");
+      const maxX = Math.max(0, mouseZone.clientWidth - targetBtn.offsetWidth - 18);
+      const maxY = Math.max(0, mouseZone.clientHeight - targetBtn.offsetHeight - 18);
+      const x = 12 + Math.round(Math.random() * maxX);
+      const y = 12 + Math.round(Math.random() * maxY);
+      setTimeout(() => {
+        targetBtn.style.left = `${x}px`;
+        targetBtn.style.top = `${y}px`;
+        targetBtn.classList.remove("hit");
+      }, 160);
+    });
+
+    const typingBox = document.getElementById("typingBox");
+    typingBox.addEventListener("input", () => {
+      document.getElementById("typingCount").textContent = `${typingBox.value.length} toques`;
+    });
+
+    const requestedSlide = Number(new URLSearchParams(window.location.search).get("slide"));
+    showSlide(Number.isFinite(requestedSlide) && requestedSlide > 0 ? requestedSlide - 1 : 0);
+  </script>
+</body>
+</html>
+
+
