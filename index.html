@@ -462,8 +462,8 @@
 
     .keyboard-large {
       display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      gap: 8px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
       background: #dbe6f4;
       border: 1px solid #adbfd7;
       border-radius: 12px;
@@ -471,22 +471,46 @@
     }
 
     .key {
-      min-height: 54px;
+      min-height: 118px;
       display: grid;
-      place-items: center;
+      grid-template-rows: 1fr auto auto;
+      justify-items: center;
+      align-items: center;
+      gap: 4px;
       border: 1px solid #9fb2cb;
-      border-bottom-width: 4px;
-      border-radius: 7px;
+      border-bottom-width: 5px;
+      border-radius: 9px;
       background: #fff;
       color: var(--blue);
-      font-size: clamp(20px, 2.2cqw, 30px);
       font-weight: 900;
+      text-align: center;
+      padding: 10px 8px;
+    }
+
+    .key .symbol {
+      font-size: clamp(28px, 3.4cqw, 46px);
+      line-height: 1;
+    }
+
+    .key .name {
+      font-size: clamp(15px, 1.35cqw, 19px);
+      line-height: 1.1;
+    }
+
+    .key .use {
+      color: var(--muted);
+      font-size: clamp(12px, 1.1cqw, 15px);
+      line-height: 1.15;
+      font-weight: 800;
     }
 
     .key.orange { background: #fff0e6; border-color: #f3a46f; color: #ad4f17; }
     .key.green { background: #e5f8ef; border-color: #78c7a7; color: #1d684f; }
-    .key.space { grid-column: span 4; }
-    .key.wide { grid-column: span 2; }
+    .key.blue { background: #e9f2ff; border-color: #7aa8df; }
+    .key.space { grid-column: span 2; }
+    .key.letter { min-height: 76px; }
+    .key.letter .symbol { font-size: clamp(30px, 3.2cqw, 42px); }
+    .key.letter .name, .key.letter .use { display: none; }
 
     .typing-box {
       width: 100%;
@@ -658,7 +682,7 @@
       }
       .picture-card { min-height: 170px; }
       .mouse-zone { min-height: 290px; }
-      .key { min-height: 44px; }
+      .key { min-height: 92px; }
       .target { width: 78px; height: 78px; }
       .word-window { min-height: 285px; }
     }
@@ -815,21 +839,27 @@
       </div>
     </section>
 
-    <section class="slide" data-say="Estas teclas ajudam muito. Espaço separa palavras. Enter muda de linha. Apagar corrige.">
+    <section class="slide" data-say="Estas teclas ajudam muito. Veja o simbolo. Espaco separa palavras. Enter muda de linha. Apagar corrige.">
       <header>
-        <div class="tag">Teclas amigas</div>
-        <div class="lesson">Poucas teclas</div>
+        <div class="tag">Teclas importantes</div>
+        <div class="lesson">Simbolo e acao</div>
       </header>
       <div class="content">
         <div class="keyboard-large">
-          <div class="key">A</div><div class="key">B</div><div class="key">C</div><div class="key">D</div><div class="key">E</div>
-          <div class="key">F</div><div class="key">G</div><div class="key">H</div><div class="key">I</div><div class="key">J</div>
-          <div class="key orange wide">Apagar</div><div class="key green wide">Enter</div><div class="key space">Espaço</div>
-          <div class="key">1</div><div class="key">2</div>
+          <div class="key orange"><span class="symbol">&#x2190;</span><span class="name">Backspace</span><span class="use">apagar</span></div>
+          <div class="key green"><span class="symbol">&#x21B5;</span><span class="name">Enter</span><span class="use">nova linha</span></div>
+          <div class="key blue space"><span class="symbol">&#x2501;&#x2501;&#x2501;</span><span class="name">Espaco</span><span class="use">separar</span></div>
+          <div class="key orange"><span class="symbol">&#x21E7;</span><span class="name">Shift</span><span class="use">maiuscula</span></div>
+          <div class="key orange"><span class="symbol">Caps</span><span class="name">Caps Lock</span><span class="use">travar letra</span></div>
+          <div class="key blue"><span class="symbol">&#x2190; &#x2191; &#x2193; &#x2192;</span><span class="name">Setas</span><span class="use">mover</span></div>
+          <div class="key"><span class="symbol">Ctrl</span><span class="name">Control</span><span class="use">atalho</span></div>
+          <div class="key"><span class="symbol">Alt</span><span class="name">Alt</span><span class="use">atalho</span></div>
+          <div class="key orange"><span class="symbol">Del</span><span class="name">Delete</span><span class="use">apagar a frente</span></div>
+          <div class="key blue"><span class="symbol">Esc</span><span class="name">Escape</span><span class="use">sair</span></div>
         </div>
         <div class="two-grid">
-          <div class="card"><h3>Espaço</h3><p>Separa as palavras.</p></div>
-          <div class="card"><h3>Apagar</h3><p>Corrige um erro.</p></div>
+          <div class="card"><h3>Memoria visual</h3><p>Olhe o simbolo, ache a tecla e toque uma vez.</p></div>
+          <div class="card"><h3>Treino curto</h3><p>Espaco, Enter e Apagar primeiro.</p></div>
         </div>
       </div>
     </section>

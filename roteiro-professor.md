@@ -138,25 +138,43 @@ Se o aluno tiver dificuldade:
 - Use mouse com velocidade menor no Windows.
 - Deixe o aluno clicar em um alvo só, sem mudar a posição.
 
-### 6. Teclas amigas - 10 minutos
+### 6. Teclas importantes - 10 minutos
 
 Slide 7.
 
-Foque em poucas teclas:
+Foque primeiro na memorizacao visual do simbolo da tecla, nao na leitura do nome.
 
-- Espaço: separa.
-- Apagar: corrige.
-- Enter: muda linha.
+Prioridade alta:
 
-Demonstração:
+- `⌫` Backspace: apaga para tras.
+- `↵` Enter: muda de linha ou confirma.
+- `␣` Espaco: separa palavras.
+
+Mostre tambem, apenas para reconhecimento:
+
+- `⇧` Shift: ajuda a fazer letra maiuscula.
+- `Caps Lock`: trava letras maiusculas.
+- `← ↑ ↓ →`: setas para mover.
+- `Del`: apaga a frente.
+- `Esc`: sair/cancelar.
+
+Demonstracao:
 
 - Abra Bloco de Notas ou Word.
 - Aperte uma letra.
-- Aperte espaço.
-- Aperte apagar.
-- Aperte Enter.
+- Mostre o espaco separando.
+- Mostre `⌫` apagando.
+- Mostre `↵` descendo para outra linha.
 
-Não ensine atalhos ainda. Ctrl, Alt e Shift podem ficar para outro dia.
+Estrategia de memorizacao:
+
+1. Aponte para o simbolo no slide.
+2. Peca para o aluno achar o mesmo simbolo no teclado real.
+3. Peca apenas um toque.
+4. Mostre o efeito na tela.
+5. Repita com no maximo 3 teclas por vez.
+
+Nao ensine atalhos ainda. Ctrl e Alt ficam apenas como reconhecimento visual.
 
 ### 7. Nome e letras grandes - 15 a 20 minutos
 
