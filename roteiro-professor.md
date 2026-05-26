@@ -205,11 +205,24 @@ Slide 9 - Area de trabalho:
 - Pergunte: "Onde esta a barra?"
 - Aceite resposta por apontar.
 
-Slides 10 a 12 - Criar uma pasta passo a passo:
+Slide 10 - Janelas:
 
-- Slide 10: mostre que o primeiro passo e clicar com o botao direito em uma parte vazia da area de trabalho.
-- Slide 11: mostre o caminho visual: `Novo` e depois `Pasta`.
-- Slide 12: mostre que a pasta precisa de nome. Use um nome curto, como `AULA`.
+- Mostre que programas abrem em janelas.
+- Ensine os tres desenhos: `_`, quadrado e `X`.
+- Use gesto: apontar primeiro, clicar depois.
+- No Windows real, abra uma janela simples e aponte a barra de titulo.
+
+Slide 11 - Atividade do botao:
+
+- Pergunte: "Qual botao fecha?"
+- Deixe o aluno escolher.
+- Se errar, volte para o desenho da janela e repita.
+
+Slides 12 a 14 - Criar uma pasta passo a passo:
+
+- Slide 12: mostre que o primeiro passo e clicar com o botao direito em uma parte vazia da area de trabalho.
+- Slide 13: mostre o caminho visual: `Novo` e depois `Pasta`.
+- Slide 14: mostre que a pasta precisa de nome. Use um nome curto, como `AULA`.
 - Depois do nome, peca para apertar `Enter`.
 
 Pratica no Windows real:
@@ -223,19 +236,7 @@ Pratica no Windows real:
 
 Se o aluno tiver dificuldade motora, faca voce o clique direito e deixe o aluno apenas escolher `Pasta` ou apertar `Enter`.
 
-Slide 13 - Janelas:
-
-- Mostre que programas abrem em janelas.
-- Ensine os tres desenhos: `_`, quadrado e `X`.
-- Use gesto: apontar primeiro, clicar depois.
-
-Slide 14 - Atividade do botao:
-
-- Pergunte: "Qual botao fecha?"
-- Deixe o aluno escolher.
-- Se errar, volte para o desenho da janela e repita.
-
-Nao aprofunde configuracoes do Windows. Para este aluno, o essencial e reconhecer area de trabalho, icone, pasta, barra, janela e botao de fechar.
+Nao aprofunde configuracoes do Windows. Para este aluno, o essencial e reconhecer area de trabalho, icone, janela, botao de fechar, pasta e barra.
 
 ### 9. Word como folha digital - 10 a 15 minutos
 
