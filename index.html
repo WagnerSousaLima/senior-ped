@@ -613,6 +613,240 @@
       line-height: 1;
     }
 
+
+    .data-form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .field-card {
+      display: grid;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .field-card label {
+      color: var(--blue);
+      font-size: clamp(20px, 2cqw, 28px);
+      font-weight: 900;
+    }
+
+    .field-card input {
+      width: 100%;
+      border: 3px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: var(--ink);
+      font: 900 clamp(24px, 2.6cqw, 34px)/1.2 "Segoe UI", Arial, sans-serif;
+    }
+
+    .field-card input:focus {
+      outline: 4px solid rgba(244, 122, 43, .22);
+      border-color: var(--orange);
+    }
+
+    .sample-line {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #eaf3ff;
+      border: 1px solid #b8cbea;
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: var(--blue);
+      font-size: clamp(22px, 2.4cqw, 34px);
+      font-weight: 900;
+    }
+
+    .letter-bank {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .letter-tile {
+      min-width: 52px;
+      min-height: 52px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 8px;
+      color: var(--blue);
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .windows-desktop {
+      min-height: 330px;
+      border: 1px solid #9db7d8;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2d76c9, #9ed5ff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .desktop-icon {
+      position: absolute;
+      width: 92px;
+      min-height: 86px;
+      display: grid;
+      justify-items: center;
+      gap: 6px;
+      color: #fff;
+      font-weight: 900;
+      text-shadow: 0 1px 4px rgba(0,0,0,.35);
+      text-align: center;
+    }
+
+    .desktop-icon .icon-box {
+      width: 54px;
+      height: 46px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.92);
+      border: 2px solid rgba(22,63,122,.28);
+      box-shadow: 0 6px 18px rgba(16,34,58,.16);
+    }
+
+    .desktop-icon.folder .icon-box {
+      background: linear-gradient(#ffd978 0 34%, #f1ad32 34%);
+    }
+
+    .desktop-icon.trash .icon-box {
+      background: linear-gradient(#f6fbff, #dce9f8);
+      border-radius: 5px 5px 10px 10px;
+    }
+
+    .taskbar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(10, 32, 66, .88);
+      padding: 8px 12px;
+    }
+
+    .start-button {
+      min-width: 108px;
+      height: 36px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .task-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.9);
+    }
+
+    .window-demo {
+      background: #fff;
+      border: 1px solid #aebfd6;
+      border-radius: 10px;
+      overflow: hidden;
+      min-height: 315px;
+    }
+
+    .window-bar {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #245aa2;
+      color: #fff;
+      padding: 0 14px;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .window-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .win-btn {
+      width: 46px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      background: rgba(255,255,255,.18);
+      color: #fff;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .win-btn.close,
+    .win-btn.danger { background: #d54444; }
+
+    .window-body {
+      min-height: 250px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 18px;
+      background: #f5f8fc;
+    }
+
+    .folder-card {
+      display: grid;
+      place-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .folder-card::before { display: none; }
+
+    .button-quiz {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .button-quiz button {
+      min-height: 118px;
+      border: 3px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      color: var(--blue);
+      font-size: clamp(32px, 4cqw, 54px);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .button-quiz button.correct { border-color: var(--green); background: #e5f8ef; }
+    .button-quiz button.wrong { border-color: var(--red); background: #fff0f0; }
+
+    .center-body {
+      min-height: 260px;
+      grid-template-columns: 1fr;
+      display: grid;
+      place-items: center;
+      font-size: clamp(2rem, 6vw, 5rem);
+      font-weight: 900;
+      color: var(--blue);
+      text-align: center;
+    }
+
     .controls {
       position: fixed;
       left: 0;
@@ -727,10 +961,10 @@
       </div>
     </section>
 
-    <section class="slide" data-say="Primeiro vamos reconhecer as partes. Depois vamos clicar. Depois vamos apertar algumas teclas. No fim, vamos abrir o Word.">
+    <section class="slide" data-say="Primeiro vamos reconhecer as partes. Depois vamos clicar, preencher dados simples, conhecer o Windows e abrir o Word.">
       <header>
         <div class="tag">O caminho</div>
-        <div class="lesson">Poucos passos</div>
+        <div class="lesson">Aula 2 com mais pratica</div>
       </header>
       <div class="content big-grid">
         <div class="card picture-card">
@@ -864,27 +1098,133 @@
       </div>
     </section>
 
-    <section class="slide" data-say="Vamos procurar as letras do nome. A letra grande ajuda o olho a encontrar a tecla.">
+    <section class="slide" data-say="Vamos preencher dados simples. Nome. Idade. E a primeira letra grande.">
       <header>
-        <div class="tag">Meu nome</div>
-        <div class="lesson">Letras grandes</div>
+        <div class="tag">Meus dados</div>
+        <div class="lesson">Nome, idade e letra grande</div>
       </header>
       <div class="content two-grid">
-        <div class="card">
-          <h2>Procure no teclado</h2>
-          <p class="mini">O professor escreve seu nome em um cartão.</p>
-          <div>
-            <span class="focus-word">A</span>
-            <span class="focus-word">E</span>
-            <span class="focus-word">I</span>
-            <span class="focus-word">O</span>
-            <span class="focus-word">U</span>
+        <div class="card data-form">
+          <div class="field-card">
+            <label for="nameInput">Nome</label>
+            <input id="nameInput" autocomplete="off" placeholder="Ex: Maria">
+          </div>
+          <div class="field-card">
+            <label for="ageInput">Idade</label>
+            <input id="ageInput" inputmode="numeric" autocomplete="off" placeholder="Ex: 68">
+          </div>
+          <div class="field-card">
+            <label for="capitalInput">Letra maiuscula</label>
+            <input id="capitalInput" maxlength="1" autocomplete="off" placeholder="M">
           </div>
         </div>
-        <div class="card">
-          <h2>Digite aqui</h2>
-          <textarea class="typing-box" id="typingBox" placeholder="A E I O U"></textarea>
+        <div class="card data-form">
+          <h2>Veja na tela</h2>
+          <div class="sample-line" id="dataPreview">Nome + idade</div>
+          <p class="mini">Use Shift ou Caps Lock para fazer letra grande.</p>
+          <div class="letter-bank">
+            <span class="letter-tile">A</span><span class="letter-tile">M</span><span class="letter-tile">S</span><span class="letter-tile">J</span><span class="letter-tile">R</span>
+          </div>
           <p class="feedback" id="typingCount">0 toques</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide" data-say="Agora vamos conhecer o Windows. Ele organiza a tela, os programas, as pastas e as janelas.">
+      <header>
+        <div class="tag">Windows</div>
+        <div class="lesson">Aula 6 do livro</div>
+      </header>
+      <div class="content two-grid">
+        <div class="card windows-desktop" aria-label="Tela do Windows desenhada">
+          <div class="desktop-icon"><span>&#128193;</span><strong>Pasta</strong></div>
+          <div class="desktop-icon"><span>&#128465;</span><strong>Lixeira</strong></div>
+          <div class="desktop-icon"><span>W</span><strong>Word</strong></div>
+          <div class="taskbar"><span class="start-button">Iniciar</span><span class="task-dot"></span><span class="task-dot"></span></div>
+        </div>
+        <div class="card visual-card">
+          <h2>Windows e a mesa</h2>
+          <p>A tela inicial e como uma mesa: nela ficam atalhos, pastas e programas.</p>
+          <div class="letter-bank">
+            <span class="letter-tile">Icones</span>
+            <span class="letter-tile">Pastas</span>
+            <span class="letter-tile">Programas</span>
+            <span class="letter-tile">Janelas</span>
+          </div>
+          <p class="feedback">Atividade: aponte onde fica o botao Iniciar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Area de trabalho. Os icones abrem programas e pastas. A barra de tarefas mostra o que esta aberto.">
+      <header>
+        <div class="tag">Area de trabalho</div>
+        <div class="lesson">Icones e barra</div>
+      </header>
+      <div class="content three-grid">
+        <div class="card folder-card">
+          <div class="emoji">&#128193;</div>
+          <h2>Pasta</h2>
+          <p>Guarda arquivos.</p>
+        </div>
+        <div class="card folder-card">
+          <div class="emoji">&#128221;</div>
+          <h2>Icone</h2>
+          <p>Abre com clique.</p>
+        </div>
+        <div class="card folder-card">
+          <div class="emoji">&#9632;</div>
+          <h2>Barra</h2>
+          <p>Mostra o que esta aberto.</p>
+        </div>
+      </div>
+      <div class="activity-strip">Atividade: encontre a pasta, o icone e a barra.</div>
+    </section>
+
+    <section class="slide" data-say="Uma janela tem botoes. O traco minimiza. O quadrado aumenta. O X fecha.">
+      <header>
+        <div class="tag">Janelas</div>
+        <div class="lesson">Minimizar, aumentar, fechar</div>
+      </header>
+      <div class="content two-grid">
+        <div class="card window-demo">
+          <div class="window-bar"><span>Documento</span><div class="window-buttons"><span class="win-btn">_</span><span class="win-btn">&#9633;</span><span class="win-btn danger">X</span></div></div>
+          <div class="window-body">
+            <p>Esta e uma janela.</p>
+            <p>Ela abre, fica na tela e pode fechar.</p>
+          </div>
+        </div>
+        <div class="card visual-card">
+          <h2>Memorize pelo desenho</h2>
+          <div class="key-grid compact">
+            <div class="key-card"><strong>_</strong><span>minimiza</span></div>
+            <div class="key-card"><strong>&#9633;</strong><span>aumenta</span></div>
+            <div class="key-card"><strong>X</strong><span>fecha</span></div>
+          </div>
+          <p class="feedback">Atividade: aponte o X antes de clicar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Atividade. Qual botao fecha a janela? Escolha o X.">
+      <header>
+        <div class="tag">Atividade</div>
+        <div class="lesson">Botao da janela</div>
+      </header>
+      <div class="content two-grid">
+        <div class="card window-demo">
+          <div class="window-bar"><span>Foto</span><div class="window-buttons"><span class="win-btn">_</span><span class="win-btn">&#9633;</span><span class="win-btn danger">X</span></div></div>
+          <div class="window-body center-body">Qual botao fecha?</div>
+        </div>
+        <div class="card visual-card">
+          <div class="button-quiz" id="windowQuiz">
+            <button type="button" data-answer="wrong">_</button>
+            <button type="button" data-answer="wrong">&#9633;</button>
+            <button type="button" data-answer="right">X</button>
+          </div>
+          <p class="feedback" id="windowFeedback">Clique em uma opcao.</p>
         </div>
       </div>
     </section>
@@ -1010,7 +1350,12 @@
     document.getElementById("prevBtn").addEventListener("click", prevSlide);
     document.getElementById("speakBtn").addEventListener("click", () => speak(slides[current].dataset.say || ""));
 
+    function isTypingTarget(element) {
+      return element && (element.tagName === "INPUT" || element.tagName === "TEXTAREA" || element.isContentEditable);
+    }
+
     document.addEventListener("keydown", (event) => {
+      if (isTypingTarget(event.target)) return;
       if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") nextSlide();
       if (event.key === "ArrowLeft" || event.key === "PageUp") prevSlide();
       if (event.key.toLowerCase() === "o") speak(slides[current].dataset.say || "");
@@ -1049,9 +1394,34 @@
       }, 160);
     });
 
-    const typingBox = document.getElementById("typingBox");
-    typingBox.addEventListener("input", () => {
-      document.getElementById("typingCount").textContent = `${typingBox.value.length} toques`;
+    const nameInput = document.getElementById("nameInput");
+    const ageInput = document.getElementById("ageInput");
+    const capitalInput = document.getElementById("capitalInput");
+    const dataPreview = document.getElementById("dataPreview");
+    const typingCount = document.getElementById("typingCount");
+
+    function updateDataActivity() {
+      const name = nameInput.value.trim();
+      const age = ageInput.value.trim();
+      const capital = capitalInput.value.trim();
+      const touches = nameInput.value.length + ageInput.value.length + capitalInput.value.length;
+      dataPreview.textContent = name || age ? `${name || "Nome"} ${age ? "- " + age + " anos" : ""}` : "Nome + idade";
+      typingCount.textContent = `${touches} toques`;
+      if (capital && capital === capital.toUpperCase()) {
+        typingCount.textContent += " | letra grande ok";
+      }
+    }
+
+    [nameInput, ageInput, capitalInput].forEach((input) => input.addEventListener("input", updateDataActivity));
+
+    document.querySelectorAll("#windowQuiz button").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("#windowQuiz button").forEach((item) => item.classList.remove("correct", "wrong"));
+        const ok = button.dataset.answer === "right";
+        button.classList.add(ok ? "correct" : "wrong");
+        document.getElementById("windowFeedback").textContent = ok ? "Isso. X fecha." : "Tente o X.";
+        speak(ok ? "Isso. X fecha." : "Tente o X.");
+      });
     });
 
     const requestedSlide = Number(new URLSearchParams(window.location.search).get("slide"));
