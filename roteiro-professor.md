@@ -17,6 +17,7 @@ Ao final, o aluno deve conseguir:
 - Encontrar teclas importantes pelo simbolo real.
 - Digitar dados simples com apoio: nome, idade e uma letra maiuscula.
 - Reconhecer a tela do Windows, icones, barra de tarefas e botoes da janela.
+- Criar uma pasta com apoio, seguindo os passos: clique direito, Novo, Pasta, nome e Enter.
 - Entender o Word como uma folha digital.
 
 ## Principios de conducao
@@ -186,46 +187,59 @@ Metas possiveis:
 
 Importante: o aluno pode comparar forma com forma. Ele nao precisa ler a palavra.
 
-### 8. Windows - Aula 6 do livro - 20 minutos
+### 8. Windows e criacao de pasta - 25 a 30 minutos
 
-Slides 9 a 12.
+Slides 9 a 14.
 
-Objetivo: apresentar o Windows como a tela que organiza programas, pastas, arquivos e janelas.
+Objetivo: apresentar o Windows visualmente e fazer uma pratica concreta: criar uma pasta.
 
 Fala sugerida:
 
-> O Windows e como uma mesa. Na mesa ficam coisas para abrir: pastas, programas e arquivos.
+> O Windows e como uma mesa. Na mesa ficam desenhos para abrir programas, pastas para guardar arquivos e uma barra que mostra o que esta aberto.
 
-Slide 9 - Windows:
+Slide 9 - Area de trabalho:
 
-- Aponte os icones.
-- Aponte o botao Iniciar.
+- Aponte os tres pontos do slide: icones, botao Iniciar e barra de tarefas.
+- No Windows real, mostre a mesma area.
 - Pergunte: "Onde esta o Iniciar?"
-- Mostre no Windows real.
+- Pergunte: "Onde esta a barra?"
+- Aceite resposta por apontar.
 
-Slide 10 - Area de trabalho:
+Slides 10 a 12 - Criar uma pasta passo a passo:
 
-- Explique icone como "desenho que abre alguma coisa".
-- Explique pasta como "lugar que guarda arquivos".
-- Explique barra de tarefas como "lugar que mostra o que esta aberto".
+- Slide 10: mostre que o primeiro passo e clicar com o botao direito em uma parte vazia da area de trabalho.
+- Slide 11: mostre o caminho visual: `Novo` e depois `Pasta`.
+- Slide 12: mostre que a pasta precisa de nome. Use um nome curto, como `AULA`.
+- Depois do nome, peca para apertar `Enter`.
 
-Slide 11 - Janelas:
+Pratica no Windows real:
+
+1. Clique com o botao direito em uma area vazia.
+2. Escolha `Novo`.
+3. Escolha `Pasta`.
+4. Digite `AULA` ou o primeiro nome do aluno.
+5. Aperte `Enter`.
+6. Peca para o aluno apontar a pasta criada.
+
+Se o aluno tiver dificuldade motora, faca voce o clique direito e deixe o aluno apenas escolher `Pasta` ou apertar `Enter`.
+
+Slide 13 - Janelas:
 
 - Mostre que programas abrem em janelas.
 - Ensine os tres desenhos: `_`, quadrado e `X`.
 - Use gesto: apontar primeiro, clicar depois.
 
-Slide 12 - Atividade do botao:
+Slide 14 - Atividade do botao:
 
 - Pergunte: "Qual botao fecha?"
 - Deixe o aluno escolher.
 - Se errar, volte para o desenho da janela e repita.
 
-Nao aprofunde configuracoes do Windows. Para este aluno, o essencial e reconhecer tela, icone, barra, janela e botao de fechar.
+Nao aprofunde configuracoes do Windows. Para este aluno, o essencial e reconhecer area de trabalho, icone, pasta, barra, janela e botao de fechar.
 
 ### 9. Word como folha digital - 10 a 15 minutos
 
-Slides 13 e 14.
+Slides 15 e 16.
 
 Fala sugerida:
 
@@ -249,7 +263,7 @@ Se o aluno conseguir:
 
 ### 10. Pratica guiada - 10 minutos
 
-Slide 15.
+Slide 17.
 
 Monte uma sequencia curta:
 
@@ -257,13 +271,14 @@ Monte uma sequencia curta:
 2. Clicar no alvo.
 3. Encontrar `Enter` ou `Backspace`.
 4. Digitar primeira letra do nome.
-5. Mostrar o Word como folha.
+5. Criar ou apontar uma pasta.
+6. Mostrar o Word como folha.
 
 A pratica deve ser pequena e positiva.
 
 ### 11. Fechamento - 5 minutos
 
-Slide 16.
+Slide 18.
 
 Revise com imagens e gestos:
 
@@ -271,11 +286,12 @@ Revise com imagens e gestos:
 - "Mostre o teclado."
 - "Onde fica o X para fechar?"
 - "Onde fica o Iniciar?"
+- "Onde fica a pasta?"
 - "Onde fica a folha do Word?"
 
 Fala final sugerida:
 
-> Hoje voce clicou, tocou no teclado, colocou seus dados e conheceu o Windows. Na proxima aula vamos repetir e fazer um pouco mais.
+> Hoje voce clicou, tocou no teclado, colocou seus dados, criou uma pasta e conheceu melhor o Windows. Na proxima aula vamos repetir e fazer um pouco mais.
 
 ## Adaptacoes importantes
 
@@ -320,5 +336,5 @@ Repetir a mesma estrutura, mas acrescentar apenas uma novidade:
 - Abrir e fechar o Word.
 - Digitar nome e idade com fonte grande.
 - Trocar a cor do nome.
-- Criar uma pasta com ajuda.
+- Criar uma pasta com menos ajuda.
 - Salvar o arquivo dentro da pasta.

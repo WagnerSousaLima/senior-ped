@@ -847,6 +847,221 @@
       text-align: center;
     }
 
+
+
+    .desktop-focus {
+      min-height: 360px;
+      padding: 0;
+    }
+
+    .desktop-icon:nth-child(1) { left: 28px; top: 24px; }
+    .desktop-icon:nth-child(2) { left: 28px; top: 122px; }
+    .desktop-icon:nth-child(3) { left: 28px; top: 220px; }
+
+    .desktop-icon span {
+      width: 58px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: rgba(255,255,255,.92);
+      color: var(--blue);
+      font-size: 32px;
+      text-shadow: none;
+      box-shadow: 0 8px 18px rgba(16,34,58,.18);
+    }
+
+    .desktop-icon strong {
+      font-size: 16px;
+      line-height: 1.1;
+    }
+
+    .desktop-label {
+      position: absolute;
+      right: 22px;
+      top: 28px;
+      width: min(330px, 58%);
+      display: grid;
+      gap: 10px;
+    }
+
+    .desktop-label .callout {
+      background: rgba(255,255,255,.92);
+      border: 2px solid rgba(22,63,122,.24);
+      border-radius: 8px;
+      padding: 12px 14px;
+      color: var(--blue);
+      font-weight: 900;
+      font-size: clamp(20px, 2.2cqw, 30px);
+    }
+
+    .folder-hero {
+      min-height: 320px;
+      display: grid;
+      place-items: center;
+      gap: 12px;
+      background: #fff8e8;
+      border: 2px solid #f0c36e;
+      border-radius: 8px;
+      color: var(--blue);
+      text-align: center;
+    }
+
+    .folder-visual {
+      width: min(210px, 32cqw);
+      aspect-ratio: 1.35;
+      border-radius: 14px;
+      background: linear-gradient(#ffe08b 0 32%, #f3b742 32%);
+      box-shadow: inset 0 -8px rgba(159,99,12,.12), 0 18px 36px rgba(16,34,58,.12);
+      position: relative;
+    }
+
+    .folder-visual::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: -20px;
+      width: 88px;
+      height: 38px;
+      border-radius: 12px 12px 0 0;
+      background: #ffd365;
+    }
+
+    .step-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .step-card {
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      gap: 8px;
+      text-align: center;
+      min-height: 150px;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .step-card h3 { font-size: clamp(22px, 2.5cqw, 34px); }
+    .step-card p { font-size: clamp(16px, 1.45cqw, 20px); }
+
+    .menu-scene {
+      min-height: 350px;
+      position: relative;
+      border-radius: 10px;
+      border: 1px solid #9db7d8;
+      background: linear-gradient(135deg, #2d76c9, #9ed5ff);
+      overflow: hidden;
+    }
+
+    .click-mark {
+      position: absolute;
+      left: 42%;
+      top: 42%;
+      width: 88px;
+      height: 88px;
+      border: 6px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 8px rgba(244,122,43,.35);
+    }
+
+    .mouse-arrow {
+      position: absolute;
+      left: calc(42% + 40px);
+      top: calc(42% + 42px);
+      width: 0;
+      height: 0;
+      border-left: 26px solid #10223a;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+      transform: rotate(38deg);
+      filter: drop-shadow(0 4px 8px rgba(16,34,58,.25));
+    }
+
+    .context-menu {
+      position: absolute;
+      right: 38px;
+      top: 72px;
+      width: 230px;
+      background: #fff;
+      border: 1px solid #aebfd6;
+      border-radius: 8px;
+      box-shadow: 0 18px 42px rgba(16,34,58,.22);
+      padding: 8px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .menu-item {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 6px;
+      padding: 8px 10px;
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .menu-item.active {
+      background: #fff0e6;
+      outline: 3px solid rgba(244,122,43,.35);
+    }
+
+    .new-folder-scene {
+      min-height: 350px;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .folder-name-box {
+      display: grid;
+      gap: 12px;
+    }
+
+    .name-strip {
+      border: 3px solid var(--orange);
+      border-radius: 8px;
+      background: #fff;
+      padding: 14px 18px;
+      font-size: clamp(28px, 4cqw, 52px);
+      font-weight: 900;
+      color: var(--blue);
+      text-align: center;
+    }
+
+    .press-enter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+      border-radius: 8px;
+      background: #e5f8ef;
+      border: 2px solid #78c7a7;
+      color: #1d684f;
+      font-size: clamp(24px, 3cqw, 40px);
+      font-weight: 900;
+    }
+
     .controls {
       position: fixed;
       left: 0;
@@ -961,7 +1176,7 @@
       </div>
     </section>
 
-    <section class="slide" data-say="Primeiro vamos reconhecer as partes. Depois vamos clicar, preencher dados simples, conhecer o Windows e abrir o Word.">
+    <section class="slide" data-say="Primeiro vamos reconhecer as partes. Depois vamos clicar, preencher dados simples, criar uma pasta no Windows e abrir o Word.">
       <header>
         <div class="tag">O caminho</div>
         <div class="lesson">Aula 2 com mais pratica</div>
@@ -1132,55 +1347,114 @@
 
 
 
-    <section class="slide" data-say="Agora vamos conhecer o Windows. Ele organiza a tela, os programas, as pastas e as janelas.">
+    <section class="slide" data-say="Agora vamos conhecer o Windows. Ele organiza a area de trabalho, os icones, as pastas e as janelas.">
       <header>
         <div class="tag">Windows</div>
-        <div class="lesson">Aula 6 do livro</div>
+        <div class="lesson">Area de trabalho</div>
       </header>
       <div class="content two-grid">
-        <div class="card windows-desktop" aria-label="Tela do Windows desenhada">
+        <div class="card windows-desktop desktop-focus" aria-label="Tela do Windows desenhada">
           <div class="desktop-icon"><span>&#128193;</span><strong>Pasta</strong></div>
           <div class="desktop-icon"><span>&#128465;</span><strong>Lixeira</strong></div>
           <div class="desktop-icon"><span>W</span><strong>Word</strong></div>
+          <div class="desktop-label">
+            <div class="callout">1. Icones</div>
+            <div class="callout">2. Botao Iniciar</div>
+            <div class="callout">3. Barra de tarefas</div>
+          </div>
           <div class="taskbar"><span class="start-button">Iniciar</span><span class="task-dot"></span><span class="task-dot"></span></div>
         </div>
         <div class="card visual-card">
-          <h2>Windows e a mesa</h2>
-          <p>A tela inicial e como uma mesa: nela ficam atalhos, pastas e programas.</p>
-          <div class="letter-bank">
-            <span class="letter-tile">Icones</span>
-            <span class="letter-tile">Pastas</span>
-            <span class="letter-tile">Programas</span>
-            <span class="letter-tile">Janelas</span>
+          <h2>Olhe a tela</h2>
+          <p>A area de trabalho e a primeira mesa do computador.</p>
+          <div class="step-cards">
+            <div class="step-card"><div class="step-number">1</div><h3>Icone</h3><p>desenho que abre</p></div>
+            <div class="step-card"><div class="step-number">2</div><h3>Iniciar</h3><p>abre programas</p></div>
+            <div class="step-card"><div class="step-number">3</div><h3>Barra</h3><p>mostra o aberto</p></div>
           </div>
-          <p class="feedback">Atividade: aponte onde fica o botao Iniciar.</p>
         </div>
       </div>
     </section>
 
-    <section class="slide" data-say="Area de trabalho. Os icones abrem programas e pastas. A barra de tarefas mostra o que esta aberto.">
+    <section class="slide" data-say="Vamos criar uma pasta. Primeiro clique com o botao direito em uma parte vazia da tela.">
       <header>
-        <div class="tag">Area de trabalho</div>
-        <div class="lesson">Icones e barra</div>
+        <div class="tag">Criar pasta</div>
+        <div class="lesson">Passo 1</div>
       </header>
-      <div class="content three-grid">
-        <div class="card folder-card">
-          <div class="emoji">&#128193;</div>
-          <h2>Pasta</h2>
-          <p>Guarda arquivos.</p>
+      <div class="content two-grid">
+        <div class="card menu-scene" aria-label="Area vazia do Windows com clique direito">
+          <div class="desktop-icon"><span>&#128193;</span><strong>Pasta</strong></div>
+          <div class="click-mark"></div>
+          <div class="mouse-arrow"></div>
+          <div class="taskbar"><span class="start-button">Iniciar</span><span class="task-dot"></span></div>
         </div>
-        <div class="card folder-card">
-          <div class="emoji">&#128221;</div>
-          <h2>Icone</h2>
-          <p>Abre com clique.</p>
-        </div>
-        <div class="card folder-card">
-          <div class="emoji">&#9632;</div>
-          <h2>Barra</h2>
-          <p>Mostra o que esta aberto.</p>
+        <div class="card visual-card">
+          <h2>1. Clique direito</h2>
+          <p>Clique em um lugar vazio da area de trabalho.</p>
+          <div class="folder-hero">
+            <div class="folder-visual"></div>
+            <h3>Vamos guardar arquivos aqui</h3>
+          </div>
         </div>
       </div>
-      <div class="activity-strip">Atividade: encontre a pasta, o icone e a barra.</div>
+    </section>
+
+    <section class="slide" data-say="Depois escolha Novo. Depois escolha Pasta.">
+      <header>
+        <div class="tag">Criar pasta</div>
+        <div class="lesson">Passo 2</div>
+      </header>
+      <div class="content two-grid">
+        <div class="card menu-scene" aria-label="Menu do Windows para criar pasta">
+          <div class="context-menu">
+            <div class="menu-item">Exibir</div>
+            <div class="menu-item">Classificar</div>
+            <div class="menu-item active">Novo &#9656;</div>
+            <div class="menu-item active">&#128193; Pasta</div>
+          </div>
+          <div class="taskbar"><span class="start-button">Iniciar</span><span class="task-dot"></span></div>
+        </div>
+        <div class="card visual-card">
+          <h2>2. Novo &gt; Pasta</h2>
+          <p>Procure a palavra Novo e depois escolha Pasta.</p>
+          <div class="step-cards">
+            <div class="step-card"><div class="step-number">1</div><h3>Novo</h3></div>
+            <div class="step-card"><div class="step-number">2</div><h3>Pasta</h3></div>
+            <div class="step-card"><div class="step-number">3</div><h3>Clicar</h3></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-say="Agora digite o nome da pasta. Depois aperte Enter para confirmar.">
+      <header>
+        <div class="tag">Criar pasta</div>
+        <div class="lesson">Passo 3</div>
+      </header>
+      <div class="content two-grid">
+        <div class="card new-folder-scene">
+          <div class="folder-hero">
+            <div class="folder-visual"></div>
+            <h3>Nova pasta</h3>
+          </div>
+          <div class="folder-name-box">
+            <h2>Digite o nome</h2>
+            <div class="name-strip">AULA</div>
+            <div class="press-enter">Enter</div>
+          </div>
+        </div>
+        <div class="card visual-card">
+          <h2>3. Nome e Enter</h2>
+          <p>Use letra grande se precisar. Depois aperte Enter.</p>
+          <div class="letter-bank">
+            <span class="letter-tile">A</span>
+            <span class="letter-tile">U</span>
+            <span class="letter-tile">L</span>
+            <span class="letter-tile">A</span>
+          </div>
+          <p class="feedback">Pronto: a pasta foi criada.</p>
+        </div>
+      </div>
     </section>
 
     <section class="slide" data-say="Uma janela tem botoes. O traco minimiza. O quadrado aumenta. O X fecha.">
@@ -1270,7 +1544,7 @@
       </div>
     </section>
 
-    <section class="slide" data-say="Agora vamos fazer juntos. Tocar. Clicar. Digitar. Salvar.">
+    <section class="slide" data-say="Agora vamos fazer juntos. Tocar. Clicar. Digitar. Criar pasta. Salvar.">
       <header>
         <div class="tag">Prática</div>
         <div class="lesson">Juntos</div>
@@ -1282,6 +1556,7 @@
             <div class="checkline"><span>👀</span>Olhei as partes</div>
             <div class="checkline"><span>🖱</span>Cliquei no alvo</div>
             <div class="checkline"><span>⌨</span>Toquei nas teclas</div>
+            <div class="checkline"><span>&#128193;</span>Criei uma pasta</div>
             <div class="checkline"><span>📄</span>Escrevi no Word</div>
           </div>
         </div>
@@ -1293,7 +1568,7 @@
       </div>
     </section>
 
-    <section class="slide" data-say="Hoje você reconheceu partes do computador, clicou, tocou teclas e começou no Word.">
+    <section class="slide" data-say="Hoje você reconheceu partes do computador, clicou, tocou teclas, criou uma pasta e começou no Word.">
       <header>
         <div class="tag">Fechamento</div>
         <div class="lesson">Repetir e lembrar</div>
@@ -1305,7 +1580,7 @@
           <div class="card picture-card"><div class="icon mouse"></div><h3>Mouse</h3></div>
           <div class="card picture-card"><div class="icon keyboard"></div><h3>Teclado</h3></div>
         </div>
-        <button class="sound-btn" data-speak="Parabéns. Hoje você praticou computador, mouse e teclado.">Ouvir</button>
+        <button class="sound-btn" data-speak="Parabéns. Hoje você praticou computador, mouse, teclado e criou uma pasta.">Ouvir</button>
       </div>
     </section>
   </main>
